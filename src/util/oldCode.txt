@@ -60,33 +60,7 @@
         </Survey>
       )}
 
-      {
-      "question": "Given my current physical condition, I am satisfied with what I can do"
-    },
-    {
-      "question": "I have confidence in my ability to sustain important relationships."
-    },
-    {
-      "question": "I feel hopeful about my future."
-    },
-    {
-      "question": "I am often interested and excited about things in my life"
-    },
-    {
-      "question": "I am able to have fun."
-    },
-    {
-      "question": "I am generally satisfied with my psychological health"
-    },
-    {
-      "question": "I am able to forgive myself for my failures."
-    },
-    {
-      "question": "My life is progressing according to my expectations."
-    },
-    {
-      "question": "I am able to handle conflicts with others."
-    },
+
 
      // const [surveyResult, setSurveyResult] = useState();
 

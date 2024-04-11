@@ -1,5 +1,7 @@
+const URL = "https://surveyapp-58xk.onrender.com";
+
 export async function fetchResult(data) {
-  const response = await fetch("http://localhost:3000/results", {
+  const response = await fetch(`${URL}/results`, {
     method: "PUT",
     body: JSON.stringify(data),
     headers: {
@@ -11,7 +13,7 @@ export async function fetchResult(data) {
 }
 
 export async function fetchQuestion() {
-  const response = await fetch("http://localhost:3000/questions");
+  const response = await fetch(`${URL}/questions`);
   const questions = await response.json();
   return questions;
 }

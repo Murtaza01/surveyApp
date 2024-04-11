@@ -32,12 +32,12 @@
     }
   ],
   "choices": [
-    "strongly agree",
-    "agree",
-    "kinda agree",
-    "not sure",
-    "kinda disagree",
+    "strongly disagree",
     "disagree",
-    "strongly disagree"
+    "kinda disagree",
+    "not sure",
+    "kinda agree",
+    "agree",
+    "strongly agree"
   ]
 }

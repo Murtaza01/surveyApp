@@ -43,4 +43,7 @@ html {
     justify-content: center;
     align-items: center;
   }
+  .surveyShadow {
+    box-shadow: 1px 1px 1px --shColor, -1px -1px -1px --shColor;
+  }
 }
