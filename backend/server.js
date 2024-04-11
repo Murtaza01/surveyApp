@@ -19,9 +19,9 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cors());
 
-// app.get("/", (req, res) => {
-//   res.send("<h1>hello world</h1>");
-// });
+app.get("/", (req, res) => {
+  res.send("<h1>SurveyAPI</h1>");
+});
 
 app.get("/questions", (req, res) => {
   const questions = readFileSync(
@@ -30,12 +30,6 @@ app.get("/questions", (req, res) => {
   const parsedQuestions = JSON.parse(questions);
   res.status(200).send(parsedQuestions);
 });
-
-// app.get("/results", (req, res) => {
-//   const results = readFileSync(resultsFile);
-//   const parsedResults = JSON.parse(results);
-//   res.status(200).send(parsedResults);
-// });
 
 app.put("/results", (req, res) => {
   const newData = req.body;

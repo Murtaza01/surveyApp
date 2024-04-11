@@ -115,3 +115,9 @@
   //   }
   //   fetchingQuestions();
   // }, []);
+
+  // app.get("/results", (req, res) => {
+//   const results = readFileSync(resultsFile);
+//   const parsedResults = JSON.parse(results);
+//   res.status(200).send(parsedResults);
+// });
