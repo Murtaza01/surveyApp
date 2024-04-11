@@ -1,0 +1,46 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+body {
+  /* background-image: url(./assets/cubes.png); */
+}
+
+/* for dark & light */
+@layer base {
+  .light {
+    --background: 0, 0%, 92%; /* text-neutral-50 */
+    --altBg: 0, 0%, 99%;
+    --heading: 0, 0%, 9%; /* text-neutral-800 */
+    --paragraph: 0, 0%, 45.1%; /* text-neutral-500 */
+    --accent: 56, 89%, 66%; /* #F5EA5B */
+    --shColor: 0, 0%, 25.1%;
+  }
+  .dark {
+    --background: 0, 0%, 8%; /* text-neutral-800 */
+    --altBg: 0, 0%, 1%;
+    --heading: 220, 14.3%, 95.9%; /* text-gray-100 */
+    --paragraph: 218, 10.6%, 64.9%; /* text-gray-400 */
+    --accent: 258, 89%, 66%; /* #895BF5 */
+    --shColor: 225, 3%, 28%;
+  }
+}
+
+/* for responsiveness  */
+html {
+  font-size: 95%;
+}
+
+@media (min-width: 400px) {
+  html {
+    font-size: 125%;
+  }
+}
+
+@layer components {
+  .center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}

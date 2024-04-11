@@ -1,0 +1,117 @@
+{
+  /* <form
+            onSubmit={(e) => {
+              e.preventDefault();
+              const newScore = parseInt(e.target[userChoice].value);
+              setUserScore((prevScore) => prevScore + newScore);
+              console.log(userScore);
+              setUserChoice(null);
+              e.target.reset();
+            }}
+            className="flex gap-10"
+          >
+            {choices.map((choice, index) => {
+              return (
+                <label htmlFor={choice} className="text-xl" key={choice}>
+                  Pick {choice}
+                  <input
+                    type="radio"
+                    name="choice"
+                    onClick={() => setUserChoice(index)}
+                    value={index}
+                    id={choice}
+                  />
+                </label>
+              );
+            })}
+            <button
+              disabled={userChoice === null}
+              onClick={() => {
+                showSurvey
+                  ? setQuestionIndex((prev) => prev + 1)
+                  : setShowElement("Result");
+              }}
+            >
+              {showSurvey ? "Next Button" : "Show Result"}
+            </button>
+          </form> */
+}
+
+{showElement === "Survey" && (
+        <Survey questions={questions} questionIndex={questionIndex}>
+          <Form handleForm={handleForm}>
+            {choices.map((choice, index) => {
+              return (
+                <FormLabel
+                  key={choice}
+                  choice={choice}
+                  index={index}
+                  setUserChoice={setUserChoice}
+                />
+              );
+            })}
+            <FormButton
+              userChoice={userChoice}
+              setQuestionIndex={setQuestionIndex}
+              setShowElement={setShowElement}
+              showSurvey={showSurvey}
+            />
+          </Form>
+        </Survey>
+      )}
+
+      {
+      "question": "Given my current physical condition, I am satisfied with what I can do"
+    },
+    {
+      "question": "I have confidence in my ability to sustain important relationships."
+    },
+    {
+      "question": "I feel hopeful about my future."
+    },
+    {
+      "question": "I am often interested and excited about things in my life"
+    },
+    {
+      "question": "I am able to have fun."
+    },
+    {
+      "question": "I am generally satisfied with my psychological health"
+    },
+    {
+      "question": "I am able to forgive myself for my failures."
+    },
+    {
+      "question": "My life is progressing according to my expectations."
+    },
+    {
+      "question": "I am able to handle conflicts with others."
+    },
+
+     // const [surveyResult, setSurveyResult] = useState();
+
+  // useEffect(() => {
+  //   async function fetchingResult() {
+  //     try {
+  //       const result = await fetchResult(userResult);
+  //       setSurveyResult(result);
+  //     } catch (error) {
+  //       console.error(error);
+  //     }
+  //   }
+  //   fetchingResult();
+  // }, []);
+
+  // const [surveyData, setSurveyData] = useState();
+
+  // useEffect(() => {
+  //   async function fetchingQuestions() {
+  //     try {
+  //       const questions = await fetchQuestion();
+  //       setSurveyData(questions);
+  //     } catch (error) {
+  //       console.log("hello world");
+  //     }
+  //   }
+  //   fetchingQuestions();
+  // }, []);

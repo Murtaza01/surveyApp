@@ -1,0 +1,16 @@
+{
+  "questions": [
+    {
+      "question": "I have peace of mind."
+    }
+  ],
+  "choices": [
+    "strongly agree",
+    "agree",
+    "kinda agree",
+    "not sure",
+    "kinda disagree",
+    "disagree",
+    "strongly disagree"
+  ]
+}
