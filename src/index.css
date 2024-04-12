@@ -9,20 +9,20 @@ body {
 /* for dark & light */
 @layer base {
   .light {
-    --background: 0, 0%, 92%; /* text-neutral-50 */
-    --altBg: 0, 0%, 99%;
+    --background: 0, 0%, 99%;
     --heading: 0, 0%, 9%; /* text-neutral-800 */
     --paragraph: 0, 0%, 45.1%; /* text-neutral-500 */
     --accent: 56, 89%, 66%; /* #F5EA5B */
-    --shColor: 0, 0%, 25.1%;
+    --borderSh: 240, 3%, 93%;
+    --blurSh: 0, 0%, 82%;
   }
   .dark {
-    --background: 0, 0%, 8%; /* text-neutral-800 */
-    --altBg: 0, 0%, 1%;
+    --background: 0, 0%, 1%;
     --heading: 220, 14.3%, 95.9%; /* text-gray-100 */
     --paragraph: 218, 10.6%, 64.9%; /* text-gray-400 */
     --accent: 258, 89%, 66%; /* #895BF5 */
-    --shColor: 225, 3%, 28%;
+    --borderSh: 225, 4%, 19%;
+    --blurSh: 225, 3%, 23%;
   }
 }
 
@@ -42,8 +42,5 @@ html {
     display: flex;
     justify-content: center;
     align-items: center;
-  }
-  .surveyShadow {
-    box-shadow: 1px 1px 1px --shColor, -1px -1px -1px --shColor;
   }
 }

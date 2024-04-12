@@ -2,7 +2,6 @@ import { useRef } from "react";
 
 export default function ThankYou({ children, onSet, setUser }) {
   const username = useRef();
-
   function handleInput() {
     const name = username.current.value;
     setUser((prevResult) => ({
@@ -14,12 +13,10 @@ export default function ThankYou({ children, onSet, setUser }) {
   return (
     <div>
       {children}
-      <form onSubmit={(e) => e.preventDefault()}>
-        <label htmlFor="username">
-          <input type="text" id="username" ref={username} />
-        </label>
-        <button onClick={handleInput}>Submit</button>
-      </form>
+      <label htmlFor="username">
+        <input type="text" id="username" ref={username} />
+      </label>
+      <button onClick={handleInput}>Submit</button>
     </div>
   );
 }

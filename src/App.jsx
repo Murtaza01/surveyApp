@@ -24,14 +24,13 @@ function App() {
     user: "unknown",
     score: 0,
   });
-
+  console.log(userResult.score);
   const surveyData = useFetch(fetchQuestion);
 
-  const backupArray = Array({
+  const backupArray = {
     questions: [],
     choices: [],
-  });
-
+  };
   const { questions, choices } = surveyData || backupArray;
   const [prevTheme, setTheme, theme] = useDarkMode();
 
@@ -53,17 +52,17 @@ function App() {
           choices={choices}
           setScore={setUserResult}
           onSet={setShowElement}
-        />
+        >
+          <ThankYou setUser={setUserResult}>
+            <Figure
+              prevTheme={prevTheme}
+              figureLight={thankYouYellow}
+              figureDark={thankYouViolet}
+            />
+          </ThankYou>
+        </Survey>
       )}
-      {showElement === "ThankYou" && (
-        <ThankYou setUser={setUserResult} onSet={setShowElement}>
-          <Figure
-            prevTheme={prevTheme}
-            figureLight={thankYouYellow}
-            figureDark={thankYouViolet}
-          />
-        </ThankYou>
-      )}
+
       {showElement === "Results" && <Results userResult={userResult} />}
     </>
   );

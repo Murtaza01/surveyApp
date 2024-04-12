@@ -12,13 +12,15 @@ export default {
       xxl: "1536px",
     },
     extend: {
+      boxShadow: {
+        borderSh:
+          "0 0 1px 1px hsla(var(--borderSh)), 0 0 25px 5px hsla(var(--blurSh))",
+      },
       colors: {
         background: "hsla(var(--background))",
         heading: "hsla(var(--heading))",
         paragraph: "hsla(var(--paragraph))",
         accent: "hsla(var(--accent))",
-        shColor: "hsla(var(--shColor))",
-        altBg: "hsla(var(--altBg))",
       },
     },
   },

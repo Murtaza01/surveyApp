@@ -95,3 +95,56 @@
 //   const parsedResults = JSON.parse(results);
 //   res.status(200).send(parsedResults);
 // });
+
+      {/* <ThankYou setUser={setUserResult} onSet={setShowElement}>
+            <Figure
+              prevTheme={prevTheme}
+              figureLight={thankYouYellow}
+              figureDark={thankYouViolet}
+            />
+          </ThankYou> */}
+
+      {/* {showElement === "ThankYou" && (
+        <ThankYou setUser={setUserResult} onSet={setShowElement}>
+          <Figure
+            
+          />
+        </ThankYou>
+      )} */}
+
+      <form
+          onSubmit={showSurvey ? handleSubmit : handleInput}
+          className=" flex flex-col gap-2"
+        >
+          {showSurvey ? (
+            <>
+              
+            </>
+          ) : (
+            <>
+              
+            </>
+          )}
+          <button
+            className="bg-accent rounded-md"
+            disabled={userChoice === null}
+            onClick={() => {
+              setQuestionIndex((prev) => prev + 1);
+              // : onSet("ThankYou");
+            }}
+          >
+            Next Button
+          </button>
+        </form>
+
+        function handleSubmit(e) {
+    e.preventDefault();
+    const newScore = parseInt(e.target[userChoice].value);
+    setScore((prevResult) => ({
+      ...prevResult,
+      score: prevResult.score + newScore,
+    }));
+    setUserChoice(null);
+    e.target.reset();
+  }
+  
