@@ -10,6 +10,7 @@ export async function fetchResult(data) {
       "Content-Type": "application/json",
     },
   });
+
   const result = await response.json();
   return result;
 }

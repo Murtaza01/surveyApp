@@ -2,6 +2,7 @@ import { useRef } from "react";
 
 export default function ThankYou({ children, onSet, setUser }) {
   const username = useRef();
+
   function handleInput() {
     const name = username.current.value;
     setUser((prevResult) => ({

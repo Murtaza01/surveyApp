@@ -5,8 +5,6 @@ export default function Survey({ children, setScore, questions, choices }) {
   const [userChoice, setUserChoice] = useState(null);
   const [questionIndex, setQuestionIndex] = useState(0);
 
-  const showSurvey = questionIndex === questions.length;
-  console.log(showSurvey);
   function handleClick() {
     setQuestionIndex((prev) => prev + 1);
     setScore((prevResults) => ({
@@ -15,6 +13,9 @@ export default function Survey({ children, setScore, questions, choices }) {
     }));
     setUserChoice(null);
   }
+
+  const showSurvey = questionIndex === questions.length;
+
   return (
     <div className=" mx-2 min-h-48 bg-background shadow-borderSh mt-[20vh]  text-heading rounded-lg   sm:container  sm:mx-auto">
       <main>

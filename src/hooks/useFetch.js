@@ -2,16 +2,18 @@ import { useState, useEffect } from "react";
 
 export default function useFetch(fetchFn, data) {
   const [fetchedData, setFetchedData] = useState();
+  const [error, setErorr] = useState();
+
   useEffect(() => {
     async function fetchingData() {
       try {
-        const resData = await fetchFn(data);
-        setFetchedData(resData);
+        const response = await fetchFn(data);
+        setFetchedData(response);
       } catch (error) {
-        console.log("hello world");
+        setErorr({ message: error.message || "failed to fetch data" });
       }
     }
     fetchingData();
   }, []);
-  return fetchedData;
+  return [fetchedData, error];
 }
