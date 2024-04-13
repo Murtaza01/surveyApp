@@ -1,4 +1,5 @@
 import React from "react";
+import Button from "../components/Button";
 
 export default function Home({ onSet, children }) {
   return (
@@ -7,19 +8,19 @@ export default function Home({ onSet, children }) {
         {children}
         <h1 className="text-heading">Welcome to Survey ...</h1>
 
-        <p className="pb-2 text-paragraph">
+        <p className=" text-paragraph">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Error dolorum
           necessitatibus magnam deserunt eaque id odio minus laborum, recusandae
           corrupti reiciendis porro blanditiis impedit iste, labore dignissimos
           illo. Similique, aliquam?
         </p>
 
-        <button
-          className="bg-accent  text-heading px-2 py-[3px] rounded-lg"
-          onClick={() => onSet("Survey")}
+        <Button
+          handleClick={() => onSet("Survey")}
+          style={"px-3 rounded-lg mt-5"}
         >
           Do the Survey
-        </button>
+        </Button>
       </div>
     </section>
   );

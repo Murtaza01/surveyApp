@@ -1,5 +1,6 @@
 import { useState } from "react";
-import FormLabel from "../components/FormLabel";
+import Button from "../components/Button";
+import RadioInput from "../components/RadioInput";
 
 export default function Survey({ children, setScore, questions, choices }) {
   const [userChoice, setUserChoice] = useState(null);
@@ -14,32 +15,38 @@ export default function Survey({ children, setScore, questions, choices }) {
     setUserChoice(null);
   }
 
-  const showSurvey = questionIndex === questions.length;
+  const showSurvey = questionIndex !== questions.length;
 
   return (
-    <div className=" mx-2 min-h-48 bg-background shadow-borderSh mt-[20vh]  text-heading rounded-lg   sm:container  sm:mx-auto">
+    <div className=" mx-3  min-h-48 bg-background shadow-borderSh mt-[18vh] mb-10  text-heading rounded-lg   sm:container  sm:mx-auto">
       <main>
         {!showSurvey ? (
-          <div className=" container mx-auto p-2 ">
-            <h2>{questions[questionIndex].question}</h2>
-            {choices.map((choice, index) => {
-              return (
-                <FormLabel
-                  key={choice}
-                  choice={choice}
-                  index={index}
-                  userChoice={userChoice}
-                  onSet={setUserChoice}
-                />
-              );
-            })}
-            <button
-              className="bg-accent rounded-md"
-              disabled={userChoice === null}
-              onClick={handleClick}
-            >
-              Next
-            </button>
+          <div className="px-3 py-5">
+            <h2 className=" text-lg">
+              {questionIndex + 1}. {questions[questionIndex].question}
+            </h2>
+            <div className="flex flex-col gap-2 my-3">
+              {choices.map((choice, index) => {
+                return (
+                  <RadioInput
+                    key={choice}
+                    choice={choice}
+                    index={index}
+                    userChoice={userChoice}
+                    onSet={setUserChoice}
+                  />
+                );
+              })}
+            </div>
+            <div className="text-end">
+              <Button
+                onDisable={userChoice}
+                handleClick={handleClick}
+                style="px-5 rounded-sm"
+              >
+                Next
+              </Button>
+            </div>
           </div>
         ) : (
           children
