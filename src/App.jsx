@@ -24,16 +24,12 @@ import errorYellow from "./assets/svg/errorFigureYellow.svg";
 function App() {
   const [showElement, setShowElement] = useState("Home");
   const [userResult, setUserResult] = useState({
-    user: "unknown",
-    score: 0,
+    user: "",
+    score: 45,
   });
   const [surveyData, error] = useFetch(fetchQuestion);
 
-  const backupArray = {
-    questions: [],
-    choices: [],
-  };
-  const { questions, choices } = surveyData || backupArray;
+  const { questions, choices } = surveyData || [];
   const [prevTheme, setTheme, theme] = useDarkMode();
 
   if (error) {

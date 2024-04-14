@@ -8,7 +8,7 @@ export default function ThankYou({ children, onSet, setUser }) {
     const name = username.current.value;
     setUser((prevResult) => ({
       ...prevResult,
-      user: name,
+      user: name || "unknown",
     }));
     onSet("Results");
   }
