@@ -11,7 +11,6 @@ export async function fetchResult(data) {
     },
   });
   const result = await response.json();
-
   return result;
 }
 

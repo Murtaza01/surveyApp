@@ -36,7 +36,7 @@ app.put("/results", (req, res) => {
   const fileData = JSON.parse(readFileSync(resultsFile));
   fileData.push(newData);
   writeFileSync(resultsFile, JSON.stringify(fileData, null, 2));
-  res.status(200).sendFile(resultsFile);
+  res.status(200).json(fileData);
 });
 
 app.listen(port, () => console.log("Server Running on:", port));

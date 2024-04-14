@@ -25,7 +25,7 @@ function App() {
   const [showElement, setShowElement] = useState("Home");
   const [userResult, setUserResult] = useState({
     user: "",
-    score: 45,
+    score: 0,
   });
   const [surveyData, error] = useFetch(fetchQuestion);
 
