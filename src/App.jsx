@@ -26,6 +26,7 @@ function App() {
   const [userResult, setUserResult] = useState({
     user: "",
     score: 0,
+    gender: "",
   });
   const [surveyData, error] = useFetch(fetchQuestion);
 
