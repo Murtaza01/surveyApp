@@ -40,7 +40,7 @@ export default function Results({ userResult, prevTheme }) {
   const { figure, message } = showResult;
 
   return (
-    <div className="text-heading">
+    <div className="text-heading pb-5">
       <div className=" mt-[15vh] text-center space-y-5">
         <h2 className="mb-8 text-xl ">Your Results</h2>
         {figure}
@@ -51,11 +51,11 @@ export default function Results({ userResult, prevTheme }) {
           <h4>{user}</h4>
         </div>
       </div>
-      <div className="grid min-[500px]:grid-cols-2 px-2 gap-2">
+      <div className="mt-5 grid min-[500px]:grid-cols-2 px-2 gap-2">
         {surveyResult &&
           surveyResult.map(({ user, score, gender, age }, index) => {
             return (
-              <ResultsCard key={index}>
+              <ResultsCard key={index} gender={gender} theme={prevTheme}>
                 <span>
                   <h3>{user}</h3>
                   <h3>{age}</h3>

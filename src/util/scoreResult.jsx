@@ -1,6 +1,10 @@
 import Figure from "../components/Figure";
-import errorViolet from "../assets/svg/errorFigureViolet.svg";
-import errorYellow from "../assets/svg/errorFigureYellow.svg";
+import highScoreViolet from "../assets/svg/highScoreViolet.svg";
+import highScoreYellow from "../assets/svg/highScoreYellow.svg";
+import lowScoreYellow from "../assets/svg/lowScoreYellow.svg";
+import lowScoreViolet from "../assets/svg/lowScoreViolet.svg";
+import midScoreViolet from "../assets/svg/midScoreViolet.svg";
+import midScoreYellow from "../assets/svg/midScoreYellow.svg";
 
 let showResult = {};
 export function scoreResult(score, prevTheme) {
@@ -9,8 +13,8 @@ export function scoreResult(score, prevTheme) {
       figure: (
         <Figure
           theme={prevTheme}
-          figureLight={errorYellow}
-          figureDark={errorViolet}
+          figureLight={lowScoreYellow}
+          figureDark={lowScoreViolet}
         />
       ),
       message: <p>you didn't do good</p>,
@@ -20,8 +24,8 @@ export function scoreResult(score, prevTheme) {
       figure: (
         <Figure
           theme={prevTheme}
-          figureLight={errorYellow}
-          figureDark={errorViolet}
+          figureLight={midScoreViolet}
+          figureDark={midScoreYellow}
         />
       ),
       message: <p>you did ok</p>,
@@ -31,8 +35,8 @@ export function scoreResult(score, prevTheme) {
       figure: (
         <Figure
           theme={prevTheme}
-          figureLight={errorYellow}
-          figureDark={errorViolet}
+          figureLight={highScoreViolet}
+          figureDark={highScoreYellow}
         />
       ),
       message: <p>you did good</p>,
