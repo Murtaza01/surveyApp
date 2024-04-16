@@ -25,7 +25,7 @@ function App() {
   const [showElement, setShowElement] = useState("Home");
   const [userResult, setUserResult] = useState({
     user: "",
-    score: 20,
+    score: 0,
     gender: "",
     age: 0,
   });
