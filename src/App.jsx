@@ -27,6 +27,7 @@ function App() {
     user: "",
     score: 0,
     gender: "",
+    age: 0,
   });
   const [surveyData, error] = useFetch(fetchQuestion);
 

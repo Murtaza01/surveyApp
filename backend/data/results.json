@@ -2,41 +2,43 @@
   {
     "user": "unknown",
     "score": 0,
-    "gender": "male"
+    "gender": "male",
+    "age": "-"
   },
   {
     "user": "unknown",
     "score": 0,
-    "gender": "male"
+    "gender": "male",
+    "age": "-"
   },
   {
     "user": "unknown",
     "score": 0,
-    "gender": "male"
+    "gender": "male",
+    "age": "-"
   },
   {
-    "user": "unknown",
+    "user": "Mertda",
     "score": 0,
-    "gender": "male"
+    "gender": "male",
+    "age": "18"
   },
   {
-    "user": "unknown",
+    "user": "Mertda",
     "score": 0,
-    "gender": "male"
+    "gender": "male",
+    "age": "18"
   },
   {
-    "user": "unknown",
+    "user": "Mertda",
     "score": 0,
-    "gender": "male"
+    "gender": "female",
+    "age": "25"
   },
   {
-    "user": "unknown",
-    "score": 40,
-    "gender": "male"
-  },
-  {
-    "user": "unknown",
-    "score": 40,
-    "gender": "male"
+    "user": "Mertda",
+    "score": 0,
+    "gender": "female",
+    "age": "25"
   }
 ]

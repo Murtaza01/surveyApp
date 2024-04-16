@@ -6,6 +6,7 @@ import Figure from "../components/Figure";
 import Error from "../components/Error";
 import errorViolet from "../assets/svg/errorFigureViolet.svg";
 import errorYellow from "../assets/svg/errorFigureYellow.svg";
+import ResultsCard from "../components/ResultsCard";
 
 import { scoreResult } from "../util/scoreResult.jsx";
 
@@ -50,16 +51,23 @@ export default function Results({ userResult, prevTheme }) {
           <h4>{user}</h4>
         </div>
       </div>
-
-      {surveyResult &&
-        surveyResult.map(({ user, score }, index) => {
-          return (
-            <ul key={index}>
-              <li>{user}</li>
-              <li>{score}</li>
-            </ul>
-          );
-        })}
+      <div className="grid min-[500px]:grid-cols-2 px-2 gap-2">
+        {surveyResult &&
+          surveyResult.map(({ user, score, gender, age }, index) => {
+            return (
+              <ResultsCard key={index}>
+                <span>
+                  <h3>{user}</h3>
+                  <h3>{age}</h3>
+                </span>
+                <span>
+                  <h3>Score</h3>
+                  <h3>{score}</h3>
+                </span>
+              </ResultsCard>
+            );
+          })}
+      </div>
     </div>
   );
 }
