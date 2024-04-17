@@ -2,10 +2,6 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
-body {
-  /* background-image: url(./assets/cubes.png); */
-}
-
 /* for dark & light */
 @layer base {
   .light {
@@ -28,7 +24,7 @@ body {
 
 /* for responsiveness  */
 html {
-  font-size: 95%;
+  font-size: 105%;
 }
 
 @media (min-width: 400px) {

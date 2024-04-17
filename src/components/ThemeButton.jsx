@@ -11,7 +11,7 @@ export default function ThemeButton({ theme, onSet }) {
           onSet((prevTheme) => (prevTheme === "dark" ? "light" : "dark"))
         }
         className={`cursor-pointer transition-color py-2  duration-500 px-2  relative rounded-full 
-       w-16  text-background bg-heading shadow-sm shadow-heading`}
+       w-[4.1rem]  text-background bg-heading shadow-sm shadow-heading`}
       >
         <span className="flex justify-between  ">
           <FaRegMoon />
@@ -19,7 +19,7 @@ export default function ThemeButton({ theme, onSet }) {
         </span>
         <span
           className={`absolute transition-transform duration-500 ${
-            dark ? " translate-x-7" : "translate-x-[-7px]"
+            dark ? " translate-x-7" : "translate-x-[-6px]"
           } rounded-xl w-[40%] h-[80%] top-1  bg-accent`}
         ></span>
       </div>

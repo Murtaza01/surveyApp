@@ -17,7 +17,7 @@ export function scoreResult(score, prevTheme) {
           figureDark={lowScoreViolet}
         />
       ),
-      message: <p>you didn't do good</p>,
+      message: <p>low score</p>,
     });
   } else if (score <= 39) {
     return (showResult = {
@@ -28,7 +28,7 @@ export function scoreResult(score, prevTheme) {
           figureDark={midScoreYellow}
         />
       ),
-      message: <p>you did ok</p>,
+      message: <p>mid score</p>,
     });
   } else {
     return (showResult = {
@@ -39,7 +39,7 @@ export function scoreResult(score, prevTheme) {
           figureDark={highScoreYellow}
         />
       ),
-      message: <p>you did good</p>,
+      message: <p>high score</p>,
     });
   }
 }
