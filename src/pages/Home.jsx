@@ -3,7 +3,7 @@ import Button from "../components/Button";
 
 export default function Home({ onSet, children }) {
   return (
-    <section className="mt-[22vh] min-[400px]:mt-[20vh] ">
+    <section className="mt-[20vh] min-[400px]:mt-[18vh] ">
       <div className="py-8 px-2 text-center space-y-5 mx-auto">
         {children}
         <h1 className="text-heading">Welcome to Survey ...</h1>

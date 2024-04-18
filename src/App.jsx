@@ -25,23 +25,21 @@ function App() {
   const [showElement, setShowElement] = useState("Home");
   const [userResult, setUserResult] = useState({
     user: "",
-    score: 20,
+    score: 0,
     gender: "",
     age: 0,
   });
-  const [surveyData, error] = useFetch(fetchQuestion);
 
-  const { questions, choices } = surveyData || [];
+  const [surveyData, error] = useFetch(fetchQuestion);
   const [prevTheme, setTheme, theme] = useDarkMode();
 
-  if (error) {
+  if (error || !surveyData) {
     return (
       <>
         <ThemeButton theme={theme} onSet={setTheme} />
         <Error
-          title="An Error accord please try again"
-          message={error.message}
-          theme={prevTheme}
+          title="An Error accord 404"
+          message={error ? error.message : "..."}
         >
           <Figure
             theme={prevTheme}
@@ -53,6 +51,7 @@ function App() {
     );
   }
 
+  const { questions, choices } = surveyData;
   return (
     <>
       <ThemeButton theme={theme} onSet={setTheme} />

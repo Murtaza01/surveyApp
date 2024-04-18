@@ -1,9 +1,19 @@
-// const URL = "https://surveyapp-58xk.onrender.com";
+const URL = "https://surveyapp-58xk.onrender.com";
 // use that after finishing the app
 
-const devURL = "http://localhost:3000";
+// const devURL = "http://localhost:3000";
+
+export async function fetchQuestion() {
+  const response = await fetch(`${URL}/questions`);
+  const questions = await response.json();
+  if (!response.ok) {
+    throw new Error("failed to fetch questions");
+  }
+  return questions;
+}
+
 export async function fetchResult(data) {
-  const response = await fetch(`${devURL}/results`, {
+  const response = await fetch(`${URL}/results`, {
     method: "PUT",
     body: JSON.stringify(data),
     headers: {
@@ -11,11 +21,9 @@ export async function fetchResult(data) {
     },
   });
   const result = await response.json();
-  return result;
-}
+  if (!response.ok) {
+    throw new Error("failed to fetch Results");
+  }
 
-export async function fetchQuestion() {
-  const response = await fetch(`${devURL}/questions`);
-  const questions = await response.json();
-  return questions;
+  return result;
 }
