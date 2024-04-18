@@ -1,8 +1,7 @@
 import { fetchResult } from "../util/http";
 import { scoreAverage } from "../util/scoreAverage";
 
-import { ImSpinner2 } from "react-icons/im";
-
+import Loading from "../components/Loading";
 import useFetch from "../hooks/useFetch";
 import Figure from "../components/Figure";
 import Error from "../components/Error";
@@ -13,9 +12,16 @@ import ResultsCard from "../components/ResultsCard";
 import { scoreResult } from "../util/scoreResult.jsx";
 
 export default function Results({ userResult, prevTheme }) {
-  const [surveyResult, isFetching, error] = useFetch(fetchResult, userResult);
+  const [surveyResult, error, isFetching] = useFetch(fetchResult, userResult);
 
-  if (error) {
+  if (isFetching) {
+    return (
+      <Loading
+        style={"h-screen center flex-col gap-3"}
+        message="getting data"
+      />
+    );
+  } else if (error) {
     return (
       <Error
         title="An Error accord please try again"
@@ -51,30 +57,24 @@ export default function Results({ userResult, prevTheme }) {
         {figure}
         <div className="">{message}</div>
       </div>
-      {!isFetching ? (
-        <div className="mt-5  grid min-[520px]:grid-cols-2 px-2 gap-3">
-          {surveyResult &&
-            surveyResult.map(({ user, score, gender, age }, index) => {
-              return (
-                <ResultsCard key={index} gender={gender} theme={prevTheme}>
-                  <span>
-                    <h3>{user}</h3>
-                    <h3>{age}</h3>
-                  </span>
-                  <span>
-                    <h3>Score</h3>
-                    <h3>{score}</h3>
-                  </span>
-                </ResultsCard>
-              );
-            })}
-        </div>
-      ) : (
-        <div className="mt-[10vh] text-center ">
-          <p>Getting Other People results</p>
-          <ImSpinner2 className="mx-auto text-lg mt-3 animate-spin" />
-        </div>
-      )}
+
+      <div className="mt-5  grid min-[520px]:grid-cols-2 px-2 gap-3">
+        {surveyResult &&
+          surveyResult.map(({ user, score, gender, age }, index) => {
+            return (
+              <ResultsCard key={index} gender={gender} theme={prevTheme}>
+                <span>
+                  <h3>{user}</h3>
+                  <h3>{age}</h3>
+                </span>
+                <span>
+                  <h3>Score</h3>
+                  <h3>{score}</h3>
+                </span>
+              </ResultsCard>
+            );
+          })}
+      </div>
     </div>
   );
 }

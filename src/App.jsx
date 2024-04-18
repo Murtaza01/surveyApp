@@ -20,6 +20,7 @@ import surveyYellow from "./assets/svg/surveyFigureYellow.svg";
 import surveyViolet from "./assets/svg/surveyFigureViolet.svg";
 import errorViolet from "./assets/svg/errorFigureViolet.svg";
 import errorYellow from "./assets/svg/errorFigureYellow.svg";
+import Loading from "./components/Loading";
 
 function App() {
   const [showElement, setShowElement] = useState("Home");
@@ -30,17 +31,21 @@ function App() {
     age: 0,
   });
 
-  const [surveyData, error] = useFetch(fetchQuestion);
+  const [surveyData, error, isFetching] = useFetch(fetchQuestion);
   const [prevTheme, setTheme, theme] = useDarkMode();
 
-  if (error || !surveyData) {
+  if (isFetching) {
+    return (
+      <Loading
+        style={"h-screen center flex-col gap-3"}
+        message="getting data"
+      />
+    );
+  } else if (error) {
     return (
       <>
         <ThemeButton theme={theme} onSet={setTheme} />
-        <Error
-          title="An Error accord 404"
-          message={error ? error.message : "..."}
-        >
+        <Error title="An Error accord 404" message={error.message}>
           <Figure
             theme={prevTheme}
             figureLight={errorYellow}
