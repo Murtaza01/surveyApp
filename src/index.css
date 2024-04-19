@@ -9,6 +9,7 @@
     --heading: 0, 0%, 9%; /* text-neutral-800 */
     --paragraph: 0, 0%, 45.1%; /* text-neutral-500 */
     --accent: 56, 89%, 66%; /* #F5EA5B */
+    --accent2: 258, 89%, 66%; /* #895BF5 */
     --borderSh: 240, 3%, 93%;
     --blurSh: 0, 0%, 82%;
   }
@@ -17,6 +18,7 @@
     --heading: 220, 14.3%, 95.9%; /* text-gray-100 */
     --paragraph: 218, 10.6%, 64.9%; /* text-gray-400 */
     --accent: 258, 89%, 66%; /* #895BF5 */
+    --accent2: 56, 89%, 66%; /* #F5EA5B */
     --borderSh: 225, 4%, 19%;
     --blurSh: 225, 3%, 23%;
   }

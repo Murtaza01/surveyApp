@@ -18,7 +18,7 @@ export default function Survey({ children, setScore, questions, choices }) {
   const showSurvey = questionIndex === questions.length;
 
   return (
-    <div className="mx-3  min-h-48 bg-background shadow-borderSh mt-[18vh] min-[400px]:mt-[16vh]   text-heading rounded-lg   sm:container  sm:mx-auto">
+    <div className="mx-3 mb-10  min-h-48 bg-background shadow-borderSh mt-[20vh] min-[400px]:mt-[18vh]   text-heading rounded-lg   sm:container  sm:mx-auto">
       <main>
         {!showSurvey ? (
           <div className="px-3 py-5">

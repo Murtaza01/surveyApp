@@ -7,6 +7,7 @@ export function scoreAverage(surveyResult) {
       return acc + currentValue;
     });
     const average = scores.length / sumScore;
+    console.log(average);
     const roundedAverage = Math.round(average * 100) / 100;
     return roundedAverage;
   }

@@ -21,6 +21,7 @@ export default {
         heading: "hsla(var(--heading))",
         paragraph: "hsla(var(--paragraph))",
         accent: "hsla(var(--accent))",
+        accent2: "hsla(var(--accent2))",
       },
     },
   },

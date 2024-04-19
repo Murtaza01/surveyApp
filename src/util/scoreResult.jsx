@@ -17,7 +17,8 @@ export function scoreResult(score, prevTheme) {
           figureDark={lowScoreViolet}
         />
       ),
-      message: <p>low score</p>,
+      message:
+        "Lorem  officia totam, commodi animi illum culpa nisi obcaecati, aspernatur dolores provident sint optio cupiditate repellendus. Eveniet consectetur ipsa ex.",
     });
   } else if (score <= 39) {
     return (showResult = {
@@ -28,7 +29,7 @@ export function scoreResult(score, prevTheme) {
           figureDark={midScoreYellow}
         />
       ),
-      message: <p>mid score</p>,
+      message: "mid score",
     });
   } else {
     return (showResult = {
@@ -39,7 +40,7 @@ export function scoreResult(score, prevTheme) {
           figureDark={highScoreYellow}
         />
       ),
-      message: <p>high score</p>,
+      message: "high score",
     });
   }
 }

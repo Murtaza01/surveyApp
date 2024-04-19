@@ -4,14 +4,16 @@ import { fetchQuestion } from "./util/http";
 import useFetch from "./hooks/useFetch";
 import useDarkMode from "./hooks/useDarkMode";
 
-// components
+// components,pages
 import Home from "./pages/Home";
-import ThemeButton from "./components/ThemeButton";
+import ThemeButton from "./layout/ThemeButton";
 import Survey from "./pages/Survey";
 import ThankYou from "./components/ThankYou";
 import Figure from "./components/Figure";
 import Results from "./pages/Results";
-import Error from "./components/Error";
+import Error from "./pages/Error";
+import Loading from "./pages/Loading";
+import Footer from "./layout/Footer";
 
 // figures
 import thankYouYellow from "./assets/svg/thankyouFigureYellow.svg";
@@ -20,7 +22,6 @@ import surveyYellow from "./assets/svg/surveyFigureYellow.svg";
 import surveyViolet from "./assets/svg/surveyFigureViolet.svg";
 import errorViolet from "./assets/svg/errorFigureViolet.svg";
 import errorYellow from "./assets/svg/errorFigureYellow.svg";
-import Loading from "./components/Loading";
 
 function App() {
   const [showElement, setShowElement] = useState("Home");
@@ -35,28 +36,20 @@ function App() {
   const [prevTheme, setTheme, theme] = useDarkMode();
 
   if (isFetching) {
-    return (
-      <Loading
-        style={"h-screen center flex-col gap-3"}
-        message="getting data"
-      />
-    );
+    return <Loading message="getting data" />;
   } else if (error) {
     return (
-      <>
-        <ThemeButton theme={theme} onSet={setTheme} />
-        <Error title="An Error accord 404" message={error.message}>
-          <Figure
-            theme={prevTheme}
-            figureLight={errorYellow}
-            figureDark={errorViolet}
-          />
-        </Error>
-      </>
+      <Error title="An Error accord please try again" message={error.message}>
+        <Figure
+          theme={prevTheme}
+          figureLight={errorYellow}
+          figureDark={errorViolet}
+        />
+      </Error>
     );
   }
 
-  const { questions, choices } = surveyData;
+  const { questions, choices } = surveyData || [];
   return (
     <>
       <ThemeButton theme={theme} onSet={setTheme} />
@@ -85,10 +78,10 @@ function App() {
           </ThankYou>
         </Survey>
       )}
-
       {showElement === "Results" && (
         <Results userResult={userResult} prevTheme={prevTheme} />
       )}
+      {showElement !== "Survey" && <Footer />}
     </>
   );
 }

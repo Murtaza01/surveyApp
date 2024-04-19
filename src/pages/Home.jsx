@@ -3,12 +3,12 @@ import Button from "../components/Button";
 
 export default function Home({ onSet, children }) {
   return (
-    <section className="mt-[18vh] min-[400px]:mt-[16vh] ">
-      <div className="py-8 px-2 text-center space-y-5 mx-auto">
+    <section className="min-h-[90vh] pt-[20vh] ">
+      <div className="  center flex-col  gap-5 pb-5 px-2">
         {children}
         <h1 className="text-heading">Welcome to Survey ...</h1>
 
-        <p className=" text-paragraph">
+        <p className=" text-paragraph text-center">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Error dolorum
           necessitatibus magnam deserunt eaque id odio minus laborum, recusandae
           corrupti reiciendis porro blanditiis impedit iste, labore dignissimos
@@ -17,7 +17,7 @@ export default function Home({ onSet, children }) {
 
         <Button
           handleClick={() => onSet("Survey")}
-          style={"px-4 rounded-lg mt-8"}
+          style={"px-4 rounded-lg mt-3"}
         >
           Do the Survey
         </Button>

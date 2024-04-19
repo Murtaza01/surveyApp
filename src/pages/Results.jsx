@@ -1,33 +1,23 @@
 import { fetchResult } from "../util/http";
-import { scoreAverage } from "../util/scoreAverage";
+// import { scoreAverage } from "../util/scoreAverage";
+import { scoreResult } from "../util/scoreResult.jsx";
 
-import Loading from "../components/Loading";
 import useFetch from "../hooks/useFetch";
+import Loading from "./Loading";
+import Error from "./Error";
 import Figure from "../components/Figure";
-import Error from "../components/Error";
 import errorViolet from "../assets/svg/errorFigureViolet.svg";
 import errorYellow from "../assets/svg/errorFigureYellow.svg";
 import ResultsCard from "../components/ResultsCard";
-
-import { scoreResult } from "../util/scoreResult.jsx";
 
 export default function Results({ userResult, prevTheme }) {
   const [surveyResult, error, isFetching] = useFetch(fetchResult, userResult);
 
   if (isFetching) {
-    return (
-      <Loading
-        style={"h-screen center flex-col gap-3"}
-        message="getting data"
-      />
-    );
+    return <Loading message="getting results" />;
   } else if (error) {
     return (
-      <Error
-        title="An Error accord please try again"
-        message={error.message}
-        theme={prevTheme}
-      >
+      <Error title="An Error accord please try again" message={error.message}>
         <Figure
           theme={prevTheme}
           figureLight={errorYellow}
@@ -42,21 +32,24 @@ export default function Results({ userResult, prevTheme }) {
   // inside the backend, get the gender and display the user accordingly
 
   const showResult = scoreResult(score, prevTheme);
-  // helper function for returning the user score based on condition
-  const average = scoreAverage(surveyResult);
-  // for the average of the scores
   const { figure, message } = showResult;
+  // helper function for returning the user score based on condition
+
+  // const average = scoreAverage(surveyResult);
 
   return (
     <div className="text-heading pb-5">
       <div className=" mt-[15vh] text-center space-y-5">
-        <h2 className="mb-8 text-xl ">
+        <h2 className="mb-8 text-xl">
           {user} Result: {score}/
           <span className="text-paragraph text-lg">60</span>
         </h2>
         {figure}
-        <div className="">{message}</div>
+
+        <p className="px-5 ">{message}</p>
       </div>
+
+      <h2 className="my-10 text-xl text-center">Other People Results</h2>
 
       <div className="mt-5  grid min-[520px]:grid-cols-2 px-2 gap-3">
         {surveyResult &&

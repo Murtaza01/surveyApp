@@ -1,721 +1,97 @@
 [
   {
     "user": "unknown",
-    "score": 54,
+    "score": 34,
     "gender": "male",
     "age": "-"
   },
   {
     "user": "unknown",
-    "score": 60,
+    "score": 34,
     "gender": "male",
     "age": "-"
   },
   {
     "user": "unknown",
-    "score": 60,
+    "score": 34,
     "gender": "male",
     "age": "-"
   },
   {
     "user": "unknown",
-    "score": 0,
+    "score": 34,
     "gender": "male",
     "age": "-"
   },
   {
     "user": "unknown",
-    "score": 0,
+    "score": 11,
     "gender": "male",
     "age": "-"
   },
   {
     "user": "unknown",
-    "score": 0,
+    "score": 11,
     "gender": "male",
     "age": "-"
   },
   {
     "user": "unknown",
-    "score": 0,
+    "score": 11,
     "gender": "male",
     "age": "-"
   },
   {
     "user": "unknown",
-    "score": 0,
+    "score": 11,
     "gender": "male",
     "age": "-"
   },
   {
     "user": "unknown",
-    "score": 0,
+    "score": 51,
     "gender": "male",
     "age": "-"
   },
   {
     "user": "unknown",
-    "score": 0,
+    "score": 51,
     "gender": "male",
     "age": "-"
   },
   {
     "user": "unknown",
-    "score": 0,
+    "score": 51,
     "gender": "male",
     "age": "-"
   },
   {
     "user": "unknown",
-    "score": 0,
+    "score": 51,
     "gender": "male",
     "age": "-"
   },
   {
     "user": "unknown",
-    "score": 0,
+    "score": 21,
     "gender": "male",
     "age": "-"
   },
   {
     "user": "unknown",
-    "score": 0,
+    "score": 21,
     "gender": "male",
     "age": "-"
   },
   {
     "user": "unknown",
-    "score": 0,
+    "score": 21,
     "gender": "male",
     "age": "-"
   },
   {
     "user": "unknown",
-    "score": 0,
-    "gender": "male",
-    "age": "-"
-  },
-  {
-    "user": "unknown",
-    "score": 0,
-    "gender": "male",
-    "age": "-"
-  },
-  {
-    "user": "unknown",
-    "score": 0,
-    "gender": "male",
-    "age": "-"
-  },
-  {
-    "user": "unknown",
-    "score": 0,
-    "gender": "male",
-    "age": "-"
-  },
-  {
-    "user": "unknown",
-    "score": 0,
-    "gender": "male",
-    "age": "-"
-  },
-  {
-    "user": "unknown",
-    "score": 0,
-    "gender": "male",
-    "age": "-"
-  },
-  {
-    "user": "unknown",
-    "score": 0,
-    "gender": "male",
-    "age": "-"
-  },
-  {
-    "user": "unknown",
-    "score": 0,
-    "gender": "male",
-    "age": "-"
-  },
-  {
-    "user": "unknown",
-    "score": 0,
-    "gender": "male",
-    "age": "-"
-  },
-  {
-    "user": "unknown",
-    "score": 0,
-    "gender": "male",
-    "age": "-"
-  },
-  {
-    "user": "unknown",
-    "score": 0,
-    "gender": "male",
-    "age": "-"
-  },
-  {
-    "user": "unknown",
-    "score": 0,
-    "gender": "male",
-    "age": "-"
-  },
-  {
-    "user": "unknown",
-    "score": 0,
-    "gender": "male",
-    "age": "-"
-  },
-  {
-    "user": "unknown",
-    "score": 0,
-    "gender": "male",
-    "age": "-"
-  },
-  {
-    "user": "unknown",
-    "score": 0,
-    "gender": "male",
-    "age": "-"
-  },
-  {
-    "user": "unknown",
-    "score": 0,
-    "gender": "male",
-    "age": "-"
-  },
-  {
-    "user": "unknown",
-    "score": 0,
-    "gender": "male",
-    "age": "-"
-  },
-  {
-    "user": "unknown",
-    "score": 0,
-    "gender": "male",
-    "age": "-"
-  },
-  {
-    "user": "unknown",
-    "score": 0,
-    "gender": "male",
-    "age": "-"
-  },
-  {
-    "user": "unknown",
-    "score": 0,
-    "gender": "male",
-    "age": "-"
-  },
-  {
-    "user": "unknown",
-    "score": 0,
-    "gender": "male",
-    "age": "-"
-  },
-  {
-    "user": "unknown",
-    "score": 0,
-    "gender": "male",
-    "age": "-"
-  },
-  {
-    "user": "unknown",
-    "score": 0,
-    "gender": "male",
-    "age": "-"
-  },
-  {
-    "user": "unknown",
-    "score": 0,
-    "gender": "male",
-    "age": "-"
-  },
-  {
-    "user": "unknown",
-    "score": 0,
-    "gender": "male",
-    "age": "-"
-  },
-  {
-    "user": "unknown",
-    "score": 0,
-    "gender": "male",
-    "age": "-"
-  },
-  {
-    "user": "unknown",
-    "score": 0,
-    "gender": "male",
-    "age": "-"
-  },
-  {
-    "user": "unknown",
-    "score": 0,
-    "gender": "male",
-    "age": "-"
-  },
-  {
-    "user": "unknown",
-    "score": 0,
-    "gender": "male",
-    "age": "-"
-  },
-  {
-    "user": "unknown",
-    "score": 0,
-    "gender": "male",
-    "age": "-"
-  },
-  {
-    "user": "unknown",
-    "score": 0,
-    "gender": "male",
-    "age": "-"
-  },
-  {
-    "user": "unknown",
-    "score": 0,
-    "gender": "male",
-    "age": "-"
-  },
-  {
-    "user": "unknown",
-    "score": 0,
-    "gender": "male",
-    "age": "-"
-  },
-  {
-    "user": "unknown",
-    "score": 0,
-    "gender": "male",
-    "age": "-"
-  },
-  {
-    "user": "unknown",
-    "score": 0,
-    "gender": "male",
-    "age": "-"
-  },
-  {
-    "user": "unknown",
-    "score": 0,
-    "gender": "male",
-    "age": "-"
-  },
-  {
-    "user": "unknown",
-    "score": 0,
-    "gender": "male",
-    "age": "-"
-  },
-  {
-    "user": "unknown",
-    "score": 0,
-    "gender": "male",
-    "age": "-"
-  },
-  {
-    "user": "unknown",
-    "score": 0,
-    "gender": "male",
-    "age": "-"
-  },
-  {
-    "user": "unknown",
-    "score": 0,
-    "gender": "male",
-    "age": "-"
-  },
-  {
-    "user": "unknown",
-    "score": 0,
-    "gender": "male",
-    "age": "-"
-  },
-  {
-    "user": "unknown",
-    "score": 0,
-    "gender": "male",
-    "age": "-"
-  },
-  {
-    "user": "unknown",
-    "score": 0,
-    "gender": "male",
-    "age": "-"
-  },
-  {
-    "user": "unknown",
-    "score": 0,
-    "gender": "male",
-    "age": "-"
-  },
-  {
-    "user": "unknown",
-    "score": 0,
-    "gender": "male",
-    "age": "-"
-  },
-  {
-    "user": "unknown",
-    "score": 0,
-    "gender": "male",
-    "age": "-"
-  },
-  {
-    "user": "unknown",
-    "score": 0,
-    "gender": "male",
-    "age": "-"
-  },
-  {
-    "user": "unknown",
-    "score": 0,
-    "gender": "male",
-    "age": "-"
-  },
-  {
-    "user": "unknown",
-    "score": 0,
-    "gender": "male",
-    "age": "-"
-  },
-  {
-    "user": "unknown",
-    "score": 0,
-    "gender": "male",
-    "age": "-"
-  },
-  {
-    "user": "unknown",
-    "score": 0,
-    "gender": "male",
-    "age": "-"
-  },
-  {
-    "user": "unknown",
-    "score": 0,
-    "gender": "male",
-    "age": "-"
-  },
-  {
-    "user": "unknown",
-    "score": 0,
-    "gender": "male",
-    "age": "-"
-  },
-  {
-    "user": "unknown",
-    "score": 0,
-    "gender": "male",
-    "age": "-"
-  },
-  {
-    "user": "unknown",
-    "score": 0,
-    "gender": "male",
-    "age": "-"
-  },
-  {
-    "user": "unknown",
-    "score": 0,
-    "gender": "male",
-    "age": "-"
-  },
-  {
-    "user": "unknown",
-    "score": 0,
-    "gender": "male",
-    "age": "-"
-  },
-  {
-    "user": "unknown",
-    "score": 0,
-    "gender": "male",
-    "age": "-"
-  },
-  {
-    "user": "unknown",
-    "score": 0,
-    "gender": "male",
-    "age": "-"
-  },
-  {
-    "user": "unknown",
-    "score": 0,
-    "gender": "male",
-    "age": "-"
-  },
-  {
-    "user": "unknown",
-    "score": 0,
-    "gender": "male",
-    "age": "-"
-  },
-  {
-    "user": "unknown",
-    "score": 0,
-    "gender": "male",
-    "age": "-"
-  },
-  {
-    "user": "unknown",
-    "score": 0,
-    "gender": "male",
-    "age": "-"
-  },
-  {
-    "user": "unknown",
-    "score": 0,
-    "gender": "male",
-    "age": "-"
-  },
-  {
-    "user": "unknown",
-    "score": 0,
-    "gender": "male",
-    "age": "-"
-  },
-  {
-    "user": "unknown",
-    "score": 0,
-    "gender": "male",
-    "age": "-"
-  },
-  {
-    "user": "unknown",
-    "score": 20,
-    "gender": "male",
-    "age": "-"
-  },
-  {
-    "user": "unknown",
-    "score": 20,
-    "gender": "male",
-    "age": "-"
-  },
-  {
-    "user": "unknown",
-    "score": 20,
-    "gender": "male",
-    "age": "-"
-  },
-  {
-    "user": "unknown",
-    "score": 20,
-    "gender": "male",
-    "age": "-"
-  },
-  {
-    "user": "unknown",
-    "score": 20,
-    "gender": "male",
-    "age": "-"
-  },
-  {
-    "user": "unknown",
-    "score": 20,
-    "gender": "male",
-    "age": "-"
-  },
-  {
-    "user": "unknown",
-    "score": 20,
-    "gender": "male",
-    "age": "-"
-  },
-  {
-    "user": "unknown",
-    "score": 20,
-    "gender": "male",
-    "age": "-"
-  },
-  {
-    "user": "unknown",
-    "score": 20,
-    "gender": "male",
-    "age": "-"
-  },
-  {
-    "user": "unknown",
-    "score": 20,
-    "gender": "male",
-    "age": "-"
-  },
-  {
-    "user": "unknown",
-    "score": 20,
-    "gender": "male",
-    "age": "-"
-  },
-  {
-    "user": "unknown",
-    "score": 20,
-    "gender": "male",
-    "age": "-"
-  },
-  {
-    "user": "unknown",
-    "score": 20,
-    "gender": "male",
-    "age": "-"
-  },
-  {
-    "user": "unknown",
-    "score": 20,
-    "gender": "male",
-    "age": "-"
-  },
-  {
-    "user": "unknown",
-    "score": 20,
-    "gender": "male",
-    "age": "-"
-  },
-  {
-    "user": "unknown",
-    "score": 20,
-    "gender": "male",
-    "age": "-"
-  },
-  {
-    "user": "unknown",
-    "score": 20,
-    "gender": "male",
-    "age": "-"
-  },
-  {
-    "user": "unknown",
-    "score": 20,
-    "gender": "male",
-    "age": "-"
-  },
-  {
-    "user": "unknown",
-    "score": 20,
-    "gender": "male",
-    "age": "-"
-  },
-  {
-    "user": "unknown",
-    "score": 20,
-    "gender": "male",
-    "age": "-"
-  },
-  {
-    "user": "unknown",
-    "score": 20,
-    "gender": "male",
-    "age": "-"
-  },
-  {
-    "user": "unknown",
-    "score": 20,
-    "gender": "male",
-    "age": "-"
-  },
-  {
-    "user": "unknown",
-    "score": 20,
-    "gender": "male",
-    "age": "-"
-  },
-  {
-    "user": "unknown",
-    "score": 20,
-    "gender": "male",
-    "age": "-"
-  },
-  {
-    "user": "unknown",
-    "score": 20,
-    "gender": "male",
-    "age": "-"
-  },
-  {
-    "user": "unknown",
-    "score": 20,
-    "gender": "male",
-    "age": "-"
-  },
-  {
-    "user": "unknown",
-    "score": 20,
-    "gender": "male",
-    "age": "-"
-  },
-  {
-    "user": "unknown",
-    "score": 20,
-    "gender": "male",
-    "age": "-"
-  },
-  {
-    "user": "Mertda",
-    "score": 20,
-    "gender": "male",
-    "age": "-"
-  },
-  {
-    "user": "Mertda",
-    "score": 20,
-    "gender": "male",
-    "age": "-"
-  },
-  {
-    "user": "Mertda",
-    "score": 20,
-    "gender": "male",
-    "age": "-"
-  },
-  {
-    "user": "Mertda",
-    "score": 20,
-    "gender": "male",
-    "age": "-"
-  },
-  {
-    "user": "unknown",
-    "score": 60,
-    "gender": "male",
-    "age": "-"
-  },
-  {
-    "user": "unknown",
-    "score": 60,
-    "gender": "male",
-    "age": "-"
-  },
-  {
-    "user": "unknown",
-    "score": 60,
-    "gender": "male",
-    "age": "-"
-  },
-  {
-    "user": "unknown",
-    "score": 60,
-    "gender": "male",
-    "age": "-"
-  },
-  {
-    "user": "unknown",
-    "score": 0,
-    "gender": "male",
-    "age": "-"
-  },
-  {
-    "user": "unknown",
-    "score": 0,
-    "gender": "male",
-    "age": "-"
-  },
-  {
-    "user": "unknown",
-    "score": 0,
+    "score": 21,
     "gender": "male",
     "age": "-"
   },
