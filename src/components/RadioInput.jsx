@@ -2,7 +2,7 @@ export default function RadioInput({ choice, index, onSet, userChoice }) {
   return (
     <label
       className={` capitalize py-1 rounded-sm px-3  ${
-        userChoice === index ? "bg-accent" : "bg-paragraph/20"
+        userChoice === index ? "bg-accent" : "bg-secondary/20"
       } shadow-inner `}
       htmlFor={choice}
       onClick={() => onSet(index)}

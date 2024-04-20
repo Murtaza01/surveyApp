@@ -13,13 +13,13 @@ export default {
     },
     extend: {
       boxShadow: {
-        borderSh:
-          "0 0 1px 1px hsla(var(--borderSh)), 0 0 25px 5px hsla(var(--blurSh))",
+        customSh:
+          "0 0 1px 1px hsla(var(--customSh)), 0 0 25px 5px hsla(var(--shadowLayer))",
       },
       colors: {
         background: "hsla(var(--background))",
-        heading: "hsla(var(--heading))",
-        paragraph: "hsla(var(--paragraph))",
+        primary: "hsla(var(--primary))",
+        secondary: "hsla(var(--secondary))",
         accent: "hsla(var(--accent))",
         accent2: "hsla(var(--accent2))",
       },

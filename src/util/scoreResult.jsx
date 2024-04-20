@@ -18,7 +18,7 @@ export function scoreResult(score, prevTheme) {
         />
       ),
       message:
-        "Lorem  officia totam, commodi animi illum culpa nisi obcaecati, aspernatur dolores provident sint optio cupiditate repellendus. Eveniet consectetur ipsa ex.",
+        "your low score indicates that your well-being needs your time and attention, please take care of your  soul, its your most valuable possessions ",
     });
   } else if (score <= 39) {
     return (showResult = {
@@ -29,7 +29,8 @@ export function scoreResult(score, prevTheme) {
           figureDark={midScoreYellow}
         />
       ),
-      message: "mid score",
+      message:
+        "you have a balanced life, you are in a good position to improve your well-being and pay more attention to the things that really matters ",
     });
   } else {
     return (showResult = {
@@ -40,7 +41,8 @@ export function scoreResult(score, prevTheme) {
           figureDark={highScoreYellow}
         />
       ),
-      message: "high score",
+      message:
+        "Your high score indicates that you have a great quality of life, be proud and thankful to whomever who were a part that contributed in that, try to maintain and improve upon your life.",
     });
   }
 }

@@ -2,25 +2,40 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
+/* typeography */
+
+@font-face {
+  font-family: "Amulya";
+  src: url(./assets/fonts/Amulya-Bold.ttf) format("opentype");
+}
+@font-face {
+  font-family: "Sentient";
+  src: url(./assets/fonts/Sentient-Regular.ttf) format("opentype");
+}
+@font-face {
+  font-family: "Synonym";
+  src: url(./assets/fonts/Synonym-Regular.ttf) format("opentype");
+}
+
 /* for dark & light */
 @layer base {
   .light {
     --background: 0, 0%, 99%;
-    --heading: 0, 0%, 9%; /* text-neutral-800 */
-    --paragraph: 0, 0%, 45.1%; /* text-neutral-500 */
+    --primary: 0, 0%, 9%; /* text-neutral-800 */
+    --secondary: 0, 0%, 45.1%; /* text-neutral-500 */
     --accent: 56, 89%, 66%; /* #F5EA5B */
     --accent2: 258, 89%, 66%; /* #895BF5 */
-    --borderSh: 240, 3%, 93%;
-    --blurSh: 0, 0%, 82%;
+    --customSh: 240, 3%, 93%;
+    --shadowLayer: 0, 0%, 82%;
   }
   .dark {
     --background: 0, 0%, 1%;
-    --heading: 220, 14.3%, 95.9%; /* text-gray-100 */
-    --paragraph: 218, 10.6%, 64.9%; /* text-gray-400 */
+    --primary: 220, 14.3%, 95.9%; /* text-gray-100 */
+    --secondary: 218, 10.6%, 64.9%; /* text-gray-400 */
     --accent: 258, 89%, 66%; /* #895BF5 */
     --accent2: 56, 89%, 66%; /* #F5EA5B */
-    --borderSh: 225, 4%, 19%;
-    --blurSh: 225, 3%, 23%;
+    --customSh: 225, 4%, 19%;
+    --shadowLayer: 225, 3%, 23%;
   }
 }
 
@@ -40,5 +55,14 @@ html {
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+  .font-heading {
+    font-family: "Amulya";
+  }
+  .font-paragraph {
+    font-family: "Synonym";
+  }
+  .font-subHeading {
+    font-family: "Sentient";
   }
 }

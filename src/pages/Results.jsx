@@ -9,6 +9,7 @@ import Figure from "../components/Figure";
 import errorViolet from "../assets/svg/errorFigureViolet.svg";
 import errorYellow from "../assets/svg/errorFigureYellow.svg";
 import ResultsCard from "../components/ResultsCard";
+import Heading from "../components/Heading";
 
 export default function Results({ userResult, prevTheme }) {
   const [surveyResult, error, isFetching] = useFetch(fetchResult, userResult);
@@ -38,31 +39,31 @@ export default function Results({ userResult, prevTheme }) {
   // const average = scoreAverage(surveyResult);
 
   return (
-    <div className="text-heading pb-5">
+    <div className="text-primary pb-5">
       <div className=" mt-[15vh] text-center space-y-5">
-        <h2 className="mb-8 text-xl">
+        <Heading>
           {user} Result: {score}/
-          <span className="text-paragraph text-lg">60</span>
-        </h2>
+          <span className="text-secondary text-lg">60</span>
+        </Heading>
+
         {figure}
 
-        <p className="px-5 ">{message}</p>
+        <p className="px-5 font-paragraph">{message}</p>
       </div>
+      <Heading style="text-center mt-10">Other People Results</Heading>
 
-      <h2 className="my-10 text-xl text-center">Other People Results</h2>
-
-      <div className="mt-5  grid min-[520px]:grid-cols-2 px-2 gap-3">
+      <div className="mt-8  grid min-[520px]:grid-cols-2 px-2 gap-3">
         {surveyResult &&
           surveyResult.map(({ user, score, gender, age }, index) => {
             return (
               <ResultsCard key={index} gender={gender} theme={prevTheme}>
                 <span>
-                  <h3>{user}</h3>
-                  <h3>{age}</h3>
+                  <h3 className="font-paragraph">{user}</h3>
+                  <h4>{age}</h4>
                 </span>
                 <span>
-                  <h3>Score</h3>
-                  <h3>{score}</h3>
+                  <h3 className="font-paragraph">Score</h3>
+                  <h3 className="font-heading text-accent2">{score}</h3>
                 </span>
               </ResultsCard>
             );

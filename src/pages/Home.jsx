@@ -1,18 +1,18 @@
 import React from "react";
 import Button from "../components/Button";
+import Heading from "../components/Heading";
 
 export default function Home({ onSet, children }) {
   return (
     <section className="min-h-[90vh] pt-[20vh] ">
       <div className="  center flex-col  gap-5 pb-5 px-2">
         {children}
-        <h1 className="text-heading">Welcome to Survey ...</h1>
+        <Heading>Quality of Life Survey</Heading>
 
-        <p className=" text-paragraph text-center">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Error dolorum
-          necessitatibus magnam deserunt eaque id odio minus laborum, recusandae
-          corrupti reiciendis porro blanditiis impedit iste, labore dignissimos
-          illo. Similique, aliquam?
+        <p className="text-secondary text-center font-paragraph">
+          This survey consist of ten questions that is designed to give you an
+          idea about your overall quality of life, try to select the options
+          that best describe how you feel the past few weeks.
         </p>
 
         <Button

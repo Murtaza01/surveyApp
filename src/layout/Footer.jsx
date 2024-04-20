@@ -4,8 +4,8 @@ import { FaGithub } from "react-icons/fa";
 
 export default function Footer() {
   return (
-    <footer className="center h-[10vh] shadow-borderSh flex-col  text-heading bg-accent ">
-      <div className=" text-lg">
+    <footer className="center h-[10vh] shadow-customSh flex-col gap-2 text-primary bg-accent ">
+      <div className=" text-xl">
         <ul className=" center gap-4 ">
           <li>
             <a

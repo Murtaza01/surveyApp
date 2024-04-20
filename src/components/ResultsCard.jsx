@@ -9,12 +9,12 @@ export default function ResultsCard({ gender, theme, children }) {
   const femaleAvatar = theme === "light" ? femaleYellow : femaleViolet;
   // const maleAvatar = gender === "male"  ? themedAvatar : ""
   return (
-    <div className=" shadow-borderSh h-20 px-2 text-sm flex items-center gap-1">
+    <div className=" shadow-customSh h-20 px-2 text-sm flex items-center gap-1">
       <figure className="">
         <img
           src={gender === "male" ? maleAvatar : femaleAvatar}
           alt=""
-          className="w-20  rounded-full  shadow-sm shadow-heading/80"
+          className="w-20  rounded-full  shadow-sm shadow-primary/80"
         />
       </figure>
       <div className="text-center grid grid-cols-2 place-items-center w-full   ">
