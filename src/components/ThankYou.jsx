@@ -61,7 +61,6 @@ export default function ThankYou({ children, onSet, setUser }) {
             placeholder="Your age"
             min="16"
             max="70"
-            onKeyDown={(e) => e.preventDefault()}
             type="number"
             className=" w-[5.1rem] pl-1 bg-secondary/20  rounded-md outline-none border-none shadow-inner"
           />
