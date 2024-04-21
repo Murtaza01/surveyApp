@@ -37,7 +37,6 @@ export default function Results({ userResult, prevTheme }) {
   // helper function for returning the user score based on condition
 
   // const average = scoreAverage(surveyResult);
-
   return (
     <div className="text-primary pb-5">
       <div className=" mt-[15vh] text-center space-y-5">
@@ -58,7 +57,7 @@ export default function Results({ userResult, prevTheme }) {
             return (
               <ResultsCard key={index} gender={gender} theme={prevTheme}>
                 <span>
-                  <h3 className="font-paragraph">{user}</h3>
+                  <h3 className="font-paragraph capitalize">{user}</h3>
                   <h4>{age}</h4>
                 </span>
                 <span>

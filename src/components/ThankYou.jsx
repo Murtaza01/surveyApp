@@ -9,7 +9,9 @@ export default function ThankYou({ children, onSet, setUser }) {
   function handleInput() {
     const name = username.current.value;
     const gender = userSelect.current.value;
+
     const age = userAge.current.value;
+
     setUser((prevResult) => ({
       ...prevResult,
       user: name || "Anonymous",
@@ -32,6 +34,7 @@ export default function ThankYou({ children, onSet, setUser }) {
             className="bg-secondary/20 shadow-inner rounded-md px-2 py-1 outline-none"
             placeholder="Enter your name"
             id="username"
+            maxLength="10"
             ref={username}
           />
         </label>
@@ -56,8 +59,11 @@ export default function ThankYou({ children, onSet, setUser }) {
           <input
             ref={userAge}
             placeholder="Your age"
-            type="text"
-            className="px-2  w-[5.1rem] bg-secondary/20  rounded-md outline-none border-none shadow-inner"
+            min="16"
+            max="70"
+            onKeyDown={(e) => e.preventDefault()}
+            type="number"
+            className=" w-[5.1rem] pl-1 bg-secondary/20  rounded-md outline-none border-none shadow-inner"
           />
         </div>
         <Button handleClick={handleInput} style="px-4 rounded-md">

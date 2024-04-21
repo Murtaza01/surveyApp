@@ -1,6 +1,6 @@
 import express from "express";
 import bodyParser from "body-parser";
-import cors from "cors";
+// import cors from "cors";
 import path from "node:path";
 import { fileURLToPath } from "url";
 import { dirname } from "path";
@@ -17,7 +17,15 @@ const resultsFile = path.join(__dirname, "data", "results.json");
 // middleWares
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
-app.use(cors());
+// app.use(cors());
+
+app.use((req, res, next) => {
+  res.setHeader("Access-Control-Allow-Origin", "*"); // allow all domains
+  res.setHeader("Access-Control-Allow-Methods", "GET, PUT");
+  res.setHeader("Access-Control-Allow-Headers", "Content-Type");
+
+  next();
+});
 
 app.get("/", (req, res) => {
   res.send("<h1>SurveyAPI</h1>");
@@ -29,6 +37,11 @@ app.get("/questions", (req, res) => {
   );
   const parsedQuestions = JSON.parse(questions);
   res.status(200).send(parsedQuestions);
+});
+
+app.get("/results", (req, res) => {
+  const fileData = JSON.parse(readFileSync(resultsFile));
+  res.status(200).json(fileData);
 });
 
 app.put("/results", (req, res) => {
