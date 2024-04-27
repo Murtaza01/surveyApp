@@ -28,7 +28,7 @@ export default function Results({ userResult, prevTheme }) {
     );
   }
 
-  const { score, user } = userResult;
+  const { score, name } = userResult;
   // gender used to display the other user results, check the json file
   // inside the backend, get the gender and display the user accordingly
 
@@ -41,7 +41,7 @@ export default function Results({ userResult, prevTheme }) {
     <div className="text-primary pb-5">
       <div className=" mt-[15vh] text-center space-y-5">
         <Heading>
-          {user} Result: {score}/
+          {name} Result: {score}/
           <span className="text-secondary text-lg">60</span>
         </Heading>
 
@@ -53,12 +53,12 @@ export default function Results({ userResult, prevTheme }) {
 
       <div className="mt-8  grid min-[520px]:grid-cols-2 px-2 gap-3">
         {surveyResult &&
-          surveyResult.map(({ user, score, gender, age }, index) => {
+          surveyResult.map(({ name, score, gender, age }, index) => {
             return (
               <ResultsCard key={index} gender={gender} theme={prevTheme}>
                 <span>
-                  <h3 className="font-paragraph capitalize">{user}</h3>
-                  <h4>{age}</h4>
+                  <h3 className="font-paragraph capitalize">{name}</h3>
+                  <h4>{age === 0 ? "-" : age}</h4>
                 </span>
                 <span>
                   <h3 className="font-paragraph">Score</h3>

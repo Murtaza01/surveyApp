@@ -26,7 +26,7 @@ import errorYellow from "./assets/svg/errorFigureYellow.svg";
 function App() {
   const [showElement, setShowElement] = useState("Home");
   const [userResult, setUserResult] = useState({
-    user: "",
+    name: "",
     score: 0,
     gender: "",
     age: 0,

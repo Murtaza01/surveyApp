@@ -4,7 +4,8 @@ import cors from "cors";
 import path from "node:path";
 import { fileURLToPath } from "url";
 import { dirname } from "path";
-import { writeFileSync, readFileSync } from "node:fs";
+import { readFileSync } from "node:fs";
+import { insertRow, showTable } from "./database.js";
 
 const app = express();
 const port = 3000;
@@ -12,7 +13,6 @@ const port = 3000;
 // Handling File
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
-const resultsFile = path.join(__dirname, "data", "results.json");
 
 // middleWares
 app.use(bodyParser.json());
@@ -36,17 +36,16 @@ app.get("/questions", (req, res) => {
   res.status(200).send(parsedQuestions);
 });
 
-app.get("/results", (req, res) => {
-  const fileData = JSON.parse(readFileSync(resultsFile));
-  res.status(200).json(fileData);
+app.get("/results", async (req, res) => {
+  const result = await showTable();
+  res.status(200).json(result);
 });
 
-app.put("/results", (req, res) => {
-  const newData = req.body;
-  const fileData = JSON.parse(readFileSync(resultsFile));
-  fileData.push(newData);
-  writeFileSync(resultsFile, JSON.stringify(fileData, null, 2));
-  res.status(200).json(fileData);
+app.put("/results", async (req, res) => {
+  const data = req.body;
+  await insertRow(data);
+  const result = await showTable();
+  res.status(201).json(result);
 });
 
 app.listen(port, () => console.log("Server Running on:", port));

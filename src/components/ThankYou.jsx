@@ -14,9 +14,9 @@ export default function ThankYou({ children, onSet, setUser }) {
 
     setUser((prevResult) => ({
       ...prevResult,
-      user: name || "Anonymous",
+      name: name || "Anonymous",
       gender: gender,
-      age: age || "-",
+      age: age || 0,
     }));
     onSet("Results");
   }
